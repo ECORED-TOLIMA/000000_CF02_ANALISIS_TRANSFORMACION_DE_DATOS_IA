@@ -7,6 +7,9 @@
         span 2
       h1 Titulo_de_primer_nivel
 
+    separador
+    #t_2_1.titulo-segundo.color-acento-contenido(data-aos="flip-up")
+      h2 2.1	
 
 </template>
 
