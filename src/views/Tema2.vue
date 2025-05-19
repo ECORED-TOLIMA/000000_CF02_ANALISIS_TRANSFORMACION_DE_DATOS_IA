@@ -49,7 +49,7 @@
       .col-lg-10(data-aos="flip-up")
         .cajon.color-primario.p-4
           .row.justify-content-center.align-items-center
-            .col-lg-2.col-md-6.col-sm-4
+            .col-lg-2.col-md-4.col-sm-3
               figure
                 img(src='@/assets/curso/temas/tema2/img6.svg', alt='Texto que describa la imagen')
             .col-lg-10

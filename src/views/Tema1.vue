@@ -13,7 +13,7 @@
         .col-lg-12(data-aos="flip-up")
           p La limpieza de datos es un proceso fundamental que consiste en identificar, corregir o eliminar datos incompletos, inexactos o irrazonables, con el objetivo de mejorar la calidad del conjunto de datos (Chen, 2014). Este proceso es determinante, ya que la calidad de los datos incide directamente en la calidad de la información generada, lo cual repercute en la precisión y efectividad de la toma de decisiones.
       .row.justify-content-center.align-items-center.mb-4
-        .col-lg-3.col-md-6.col-sm-8.mb-4(data-aos="zoom-in")
+        .col-lg-3.col-md-4.col-sm-3.mb-4(data-aos="zoom-in")
           figure
             img(src='@/assets/curso/temas/tema1/img2.png', alt='Texto que describa la imagen')
         .col-lg-7
@@ -62,7 +62,7 @@
           .col-lg-12(data-aos="flip-up")
             p Para garantizar esta calidad, es fundamental aplicar procesos de limpieza y transformación conforme a metodologías y estándares reconocidos. Estas metodologías comprenden un conjunto de principios y prácticas que aseguran que los datos sean apropiados para su análisis o para el desarrollo de modelos de inteligencia artificial.
         .row.justify-content-center.align-items-center.mb-5
-          .col-lg-3
+          .col-lg-3.col-md-4.col-sm-3.mb-4(data-aos="zoom-in")
             figure
               img(src='@/assets/curso/temas/tema1/img4.svg', alt='Texto que describa la imagen')
           .col-lg-7
@@ -84,7 +84,7 @@
         .col-lg-8.col-sm-8.movil(data-aos="zoom-in")
           figure
             img(src='@/assets/curso/temas/tema1/img5_1.svg', alt='Texto que describa la imagen')
-        .col-lg-8.col-sm-8.desktop(data-aos="zoom-in")
+        .col-lg-8.col-md-6.col-sm-8.mb-4(data-aos="zoom-in")
           figure
             img(src='@/assets/curso/temas/tema1/img5.svg', alt='Texto que describa la imagen')
       p.mb-4 En resumen, la implementación de metodologías como el Data Assay y el Data Cleaning, junto con la estandarización y validación de datos, conforma un enfoque integral para garantizar su calidad. Este enfoque es indispensable para obtener resultados confiables tanto en el análisis estadístico como en aplicaciones basadas en inteligencia artificial.
@@ -101,7 +101,7 @@
             p.text-small(numero="2" titulo="Duplicados") Son registros repetidos que aparecen más de una vez en el conjunto de datos. Esto puede ocurrir, por ejemplo, cuando un mismo pedido se registra dos veces, inflando el total de ventas e introduciendo errores en los indicadores comerciales.
             p.text-small(numero="3" titulo="Ruido") Hace referencia a datos irrelevantes, inconsistentes o mal formateados. Un ejemplo común es cuando se ingresan nombres de clientes con diferentes convenciones como “Ana María”, “A. María” o “Ana M.”, lo que complica la unificación de registros y la calidad del análisis.
             p.text-small(numero="4" titulo="<em>Outliers</em> (valores atípicos)") Son observaciones que se desvían notablemente del resto de los datos. Por ejemplo, si en un conjunto de datos sobre salarios se encuentra un valor que triplica al siguiente más alto, podría tratarse de un error de digitación o de un caso excepcional que requiere atención especial.
-        .col-lg-4(data-aos="zoom-in")
+        .col-lg-4.col-md-4.col-sm-3.mb-4(data-aos="zoom-in")
           figure
             img(src='@/assets/curso/temas/tema1/img6.svg', alt='Texto que describa la imagen')
       p Identificar y corregir estos errores es fundamental para asegurar la confiabilidad de los datos y evitar interpretaciones erróneas en el análisis posterior.

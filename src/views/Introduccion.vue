@@ -24,7 +24,7 @@
         .col-12
           figure
             .video
-              iframe(width="1493" height="840" src="https://www.youtube.com/embed/U_exqn8Khpk" title="Fundamentos de datos, estadística descriptiva y seguridad de la información" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+              iframe(width="1493" height="840" src="https://www.youtube.com/embed/1OiA42edbqA" title="Limpieza, transformación e integración de datos para modelos predictivos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
   
   </template>
 
