@@ -5,7 +5,15 @@
     .titulo-principal.color-acento-contenido
       .titulo-principal__numero
         span 4
-      h1 Titulo_de_primer_nivel
+      h1 Automatización de modelos de inteligencia artificial
+
+    separador
+    #t_4_1.titulo-segundo.color-acento-contenido(data-aos="flip-up")
+      h2 4.1 Automatización de procesos de preparación y modelado de datos
+
+    separador
+    #t_4_1.titulo-segundo.color-acento-contenido(data-aos="flip-up")
+      h2 4.1 Automatización mediante herramientas especializadas
 
 </template>
 
