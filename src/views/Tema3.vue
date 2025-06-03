@@ -13,7 +13,7 @@
 
       .col-lg-9
         p La integración de datos consiste en combinar información proveniente de diversas fuentes heterogéneas en un conjunto de datos unificado y coherente. Este proceso busca ofrecer una visión completa y consistente de la información para su análisis y posterior explotación en modelos de inteligencia artificial o sistemas de apoyo a decisiones. Una de las tareas fundamentales en la integración es resolver las discrepancias en los nombres de atributos, estructuras y dimensiones, evitando duplicidades y conflictos que puedan comprometer la calidad del conjunto final (Wang, 2017).
-        p Las herramientas ETL (#[i Extract, Transform, Load]) y ELT (#[i Extract, Load, Transform]) son estrategias ampliamente utilizadas en los procesos de integración. En el enfoque ETL, los datos son extraídos de sus fuentes, transformados para adecuarlos a los requisitos de destino “lo que puede incluir tareas de limpieza, normalización, enriquecimiento y catalogación” y, posteriormente, cargados en un repositorio, como un #[i Data Warehouse] o un #[i Data Lake]. En cambio, el enfoque ELT invierte parte del proceso: los datos son primero extraídos y cargados en el destino para luego ser transformados, aprovechando las capacidades de procesamiento de los sistemas modernos (Elgendy, 2014).
+        p Las herramientas ETL (Extract, Transform, Load) y ELT (Extract, Load, Transform) son estrategias ampliamente utilizadas en los procesos de integración. En el enfoque ETL, los datos son extraídos de sus fuentes, transformados para adecuarlos a los requisitos de destino “lo que puede incluir tareas de limpieza, normalización, enriquecimiento y catalogación” y, posteriormente, cargados en un repositorio, como un #[i Data Warehouse] o un #[i Data Lake]. En cambio, el enfoque ELT invierte parte del proceso: los datos son primero extraídos y cargados en el destino para luego ser transformados, aprovechando las capacidades de procesamiento de los sistemas modernos (Elgendy, 2014).
     p.mb-4 La integración de datos también puede incorporar técnicas como la reconciliación de entidades (#[i entity resolution]), el mapeo semántico y el uso de #[i middlewares] o plataformas de integración, como los #[i Enterprise Service Bus] (ESB) o los sistemas basados en API. Estos enfoques permiten gestionar no solo bases de datos estructuradas, sino también fuentes de datos semiestructuradas o no estructuradas.
 
     .bloque-texto-g.bloque-texto-g--inverso.color-primario.p-3.p-sm-4.p-md-5.mb-5(data-aos="fade-right").mb-5
@@ -33,17 +33,17 @@
         LineaTiempoD.color-acento-botones
           .row(numero="A" titulo="Extracción").p-3
             .col-md-12.mb-4.mb-md-0
-              p Es el primer paso del proceso ETL y consiste en obtener datos relevantes de múltiples fuentes, que pueden incluir sistemas OLTP (Online Transaction Processing), hojas de cálculo, archivos de texto, bases de datos no estructuradas o contenido web. Para optimizar el tiempo de procesamiento, no siempre se extraen todos los datos, sino únicamente aquellos que han cambiado desde la última ejecución, principalmente registros nuevos o actualizados. La detección de cambios suele realizarse mediante la comparación entre dos instantáneas de los datos: una correspondiente a la última extracción y otra actual. Para este fin, las herramientas ETL emplean conectividad directa con las fuentes mediante conectores, APIs (Application Programming Interfaces) o servicios de datos, asegurando un acceso eficiente y seguro.
+              p Es el primer paso del proceso ETL y consiste en obtener datos relevantes de múltiples fuentes, que pueden incluir sistemas OLTP (#[i Online Transaction Processing]), hojas de cálculo, archivos de texto, bases de datos no estructuradas o contenido web. Para optimizar el tiempo de procesamiento, no siempre se extraen todos los datos, sino únicamente aquellos que han cambiado desde la última ejecución, principalmente registros nuevos o actualizados. La detección de cambios suele realizarse mediante la comparación entre dos instantáneas de los datos: una correspondiente a la última extracción y otra actual. Para este fin, las herramientas ETL emplean conectividad directa con las fuentes mediante conectores, APIs (#[i Application Programming Interfaces]) o servicios de datos, asegurando un acceso eficiente y seguro.
               figure
                 img(src='@/assets/curso/temas/tema3/img3.png', alt='Texto que describa la imagen')
           .row(numero="B" titulo="Transformación").p-3
             .col-md-12.mb-4.mb-md-0
-              p Una vez extraídos los datos, estos se someten a una serie de rutinas de transformación que los adaptan, corrigen y estructuran para que sean compatibles con el esquema del Data Warehouse. Esta etapa contempla diversas operaciones, como reformatear atributos, recalcular valores, modificar estructuras clave, agregar elementos temporales, asignar valores por defecto, seleccionar información relevante y consolidar datos dispersos. Durante la transformación, también se aplican procesos de limpieza de datos para corregir errores, inconsistencias y valores atípicos. Esto puede implicar traducir esquemas, filtrar información no deseada, agregar datos resumidos o utilizar herramientas de limpieza especializadas. La transformación no solo prepara los datos para su almacenamiento, sino que también garantiza su calidad y uniformidad.
+              p Una vez extraídos los datos, estos se someten a una serie de rutinas de transformación que los adaptan, corrigen y estructuran para que sean compatibles con el esquema del #[i Data Warehouse]. Esta etapa contempla diversas operaciones, como reformatear atributos, recalcular valores, modificar estructuras clave, agregar elementos temporales, asignar valores por defecto, seleccionar información relevante y consolidar datos dispersos. Durante la transformación, también se aplican procesos de limpieza de datos para corregir errores, inconsistencias y valores atípicos. Esto puede implicar traducir esquemas, filtrar información no deseada, agregar datos resumidos o utilizar herramientas de limpieza especializadas. La transformación no solo prepara los datos para su almacenamiento, sino que también garantiza su calidad y uniformidad.
               figure
                 img(src='@/assets/curso/temas/tema3/img4.png', alt='Texto que describa la imagen')
           .row(numero="C" titulo="Carga").p-3
             .col-md-12.mb-4.mb-md-0
-              p Representa la etapa final del proceso ETL y tiene como objetivo incorporar los datos transformados en el repositorio de destino, generalmente un Data Warehouse. Uno de los principales retos durante esta fase es identificar correctamente los datos nuevos y los actualizados, para evitar duplicaciones o pérdidas de información. Los registros se clasifican entre filas nuevas, que deben insertarse, y filas existentes, que requieren actualización. Muchas herramientas ETL modernas facilitan esta tarea mediante predicados de lenguaje o reglas de integración específicas. Durante la carga, también se gestionan aspectos técnicos como los segmentos de rollback y los archivos de registro, para mantener la integridad de los datos ante posibles fallos o interrupciones. Habitualmente, antes de su carga definitiva en el Data Warehouse, los datos pasan por un área de staging, donde se realizan validaciones finales y preparaciones específicas.
+              p Representa la etapa final del proceso ETL y tiene como objetivo incorporar los datos transformados en el repositorio de destino, generalmente un #[i Data Warehouse]. Uno de los principales retos durante esta fase es identificar correctamente los datos nuevos y los actualizados, para evitar duplicaciones o pérdidas de información. Los registros se clasifican entre filas nuevas, que deben insertarse, y filas existentes, que requieren actualización. Muchas herramientas ETL modernas facilitan esta tarea mediante predicados de lenguaje o reglas de integración específicas. Durante la carga, también se gestionan aspectos técnicos como los segmentos de #[i rollback] y los archivos de registro, para mantener la integridad de los datos ante posibles fallos o interrupciones. Habitualmente, antes de su carga definitiva en el #[i Data Warehouse], los datos pasan por un área de #[i staging], donde se realizan validaciones finales y preparaciones específicas.
               figure
                 img(src='@/assets/curso/temas/tema3/img5.png', alt='Texto que describa la imagen')
     separador
@@ -66,39 +66,39 @@
           .tarjeta.tarjeta--BG01.color-primario.p-4
             .row.justify-content-center.mb-3
               .col-6
-                img(src='@/assets/curso/temas/tema3/img7.svg' alt='AvatarTop')
-            h5.text-center Análisis del problema
-            p Comprender el objetivo del proyecto, los tipos de predicciones requeridas y las características de los datos disponibles.
-          .tarjeta.tarjeta--BG01.color-primario.p-4
-            .row.justify-content-center.mb-3
-              .col-6
-                img(src='@/assets/curso/temas/tema3/img8.svg' alt='AvatarTop')
-            h5.text-center Selección del modelo de IA
-            p Elegir el algoritmo más adecuado (como regresión, clasificación, clustering, redes neuronales o árboles de decisión) de acuerdo con la naturaleza del problema y la estructura de los datos.
-          .tarjeta.tarjeta--BG01.color-primario.p-4
-            .row.justify-content-center.mb-3
-              .col-6
-                img(src='@/assets/curso/temas/tema3/img9.svg' alt='AvatarTop')
-            h5.text-center Ingeniería de características
-            p Crear o seleccionar variables relevantes que representen adecuadamente el problema para mejorar el desempeño del algoritmo.
-          .tarjeta.tarjeta--BG01.color-primario.p-4
-            .row.justify-content-center.mb-3
-              .col-6
                 img(src='@/assets/curso/temas/tema3/img10.svg' alt='AvatarTop')
-            h5.text-center Entrenamiento del modelo
-            p Ajustar los parámetros internos del modelo utilizando el conjunto de entrenamiento, buscando que el modelo aprenda patrones útiles.
+            h5.text-center 1. Limpieza de datos
+            p Eliminación de duplicados, corrección de errores, tratamiento de valores atípicos y gestión de datos faltantes.
           .tarjeta.tarjeta--BG01.color-primario.p-4
             .row.justify-content-center.mb-3
               .col-6
                 img(src='@/assets/curso/temas/tema3/img11.svg' alt='AvatarTop')
-            h5.text-center Evaluación del modelo
-            p Medir el desempeño utilizando conjuntos de validación o prueba mediante métricas específicas como precisión, recall, F1-score o AUC.
+            h5.text-center 2. Transformación de variables
+            p Normalización o estandarización de datos numéricos, codificación de variables categóricas (por ejemplo, mediante codificación one-hot o label encoding) y transformación de fechas o textos según sea necesario.
           .tarjeta.tarjeta--BG01.color-primario.p-4
             .row.justify-content-center.mb-3
               .col-6
                 img(src='@/assets/curso/temas/tema3/img12.svg' alt='AvatarTop')
-            h5.text-center Ajuste de hiperparámetros (#[I Hyperparameter Tuning])
-            p Optimizar configuraciones como la tasa de aprendizaje, la profundidad de árboles o el número de capas en redes neuronales, con el fin de maximizar el rendimiento del modelo.
+            h5.text-center 3. Selección de características
+            p Identificación de las variables más relevantes para el modelo, reduciendo la dimensionalidad del conjunto de datos y eliminando variables redundantes o irrelevantes.
+          .tarjeta.tarjeta--BG01.color-primario.p-4
+            .row.justify-content-center.mb-3
+              .col-6
+                img(src='@/assets/curso/temas/tema3/img7.svg' alt='AvatarTop')
+            h5.text-center 4. Balanceo de clases
+            p En problemas de clasificación, aplicación de técnicas como sobremuestreo (oversampling) o submuestreo (undersampling) para equilibrar las clases y evitar sesgos en los modelos.
+          .tarjeta.tarjeta--BG01.color-primario.p-4
+            .row.justify-content-center.mb-3
+              .col-6
+                img(src='@/assets/curso/temas/tema3/img8.svg' alt='AvatarTop')
+            h5.text-center 5. División de datos
+            p Separación del conjunto de datos en conjuntos de entrenamiento, validación y prueba, con el fin de evaluar el rendimiento del modelo de manera objetiva.
+          .tarjeta.tarjeta--BG01.color-primario.p-4
+            .row.justify-content-center.mb-3
+              .col-6
+                img(src='@/assets/curso/temas/tema3/img9.svg' alt='AvatarTop')
+            h5.text-center 6. Aumento de datos (#[i Data Augmentation])
+            p En algunos casos, especialmente en datos de imágenes o texto, generación de nuevas muestras a partir de variaciones de las existentes para mejorar la robustez del modelo.
   
 
     p La preparación de datos resulta particularmente crítica en aplicaciones de analítica predictiva, donde se utilizan modelos estadísticos y algoritmos de aprendizaje automático para detectar patrones en datos históricos y anticipar comportamientos y tendencias futuras (Zakir, 2015).
@@ -109,8 +109,8 @@
     separador
     #t_3_3.titulo-segundo.color-acento-contenido(data-aos="flip-up")
       h2 3.3 Diseño de modelos de datos para algoritmos de inteligencia artificial y aprendizaje automático
-    p Posteriormente, es posible incorporar técnicas de automatización, como el AutoML, que permiten automatizar fases específicas del diseño, tales como la selección de modelos, el ajuste de hiperparámetros y la evaluación, acelerando el proceso de desarrollo de soluciones de IA.
-    p A pesar de la existencia de herramientas que automatizan muchas de estas etapas, la intervención y supervisión de expertos sigue siendo indispensable para interpretar adecuadamente los resultados y garantizar la validez y aplicabilidad del modelo en contextos reales.
+    p El diseño de modelos de datos para algoritmos de Inteligencia Artificial (IA) y aprendizaje automático (ML) consiste en construir estructuras organizadas de datos que permitan un entrenamiento efectivo de los algoritmos. Este diseño debe contemplar no solo la forma en que los datos son almacenados y procesados, sino también cómo se optimizan para extraer patrones significativos y realizar predicciones fiables (Sahoo, 2019).
+    p El proceso de diseño de modelos de datos implica las siguientes etapas:
 
     .BG_02.p-5
       .row.justify-content-center.align-items-center
@@ -130,7 +130,7 @@
                   img(src='@/assets/curso/temas/tema3/img14.png', alt='Texto que describa la imagen')
               .col-md-6.mb-4.mb-md-0
                 h4 Selección del modelo de IA
-                p Elegir el algoritmo más adecuado (como regresión, clasificación, clustering, redes neuronales o árboles de decisión) de acuerdo con la naturaleza del problema y la estructura de los datos.
+                p Elegir el algoritmo más adecuado (como regresión, clasificación, #[i clustering], redes neuronales o árboles de decisión) de acuerdo con la naturaleza del problema y la estructura de los datos.
             .row(titulo="")
               .col-md-6.mb-4.mb-md-0
                 h4 Ingeniería de características
@@ -148,7 +148,7 @@
             .row(titulo="")
               .col-md-6.mb-4.mb-md-0
                 h4 Evaluación del modelo
-                p Medir el desempeño utilizando conjuntos de validación o prueba mediante métricas específicas como precisión, recall, F1-score o AUC.
+                p Medir el desempeño utilizando conjuntos de validación o prueba mediante métricas específicas como precisión, #[i recall], F1-score o AUC.
               .col-md-6
                 figure
                   img(src='@/assets/curso/temas/tema3/img17.png', alt='Texto que describa la imagen')
@@ -174,30 +174,30 @@
         p La implementación de un #[i pipeline] generalmente involucra los siguientes pasos:
         ul.lista-ul--color
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Identificación de fuentes de datos.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Selección de datos relevantes.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Extracción de los datos.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Preparación de los datos.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Carga de los datos.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Modelado y análisis de los datos.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Evaluación e interpretación.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Automatización y monitoreo.
-    
+    p.mb-4 A continuación, se presenta un caso de uso de un proyecto en el cual se pretende diseñar un modelo de aprendizaje automático para la predicción de abandono de aprendices en plataformas de educación virtual:
     .tarjeta.tarjeta--BG03.p-4.mb-5(data-aos="zoom-in")
       SlyderA(tipo="b" data-aos="zoom-in")
         .row.justify-content-center
@@ -206,25 +206,25 @@
             p Obtener información sobre el comportamiento y perfil de los aprendices. A continuación, se presentan las fuentes típicas:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
-                | Logs de interacción de la plataforma (Moodle, Canvas, etc.).
+                i.fas.fa-minus
+                p.mb-0 #[i Logs] de interacción de la plataforma (Moodle, Canvas, etc.).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Tiempo de conexión y actividad en la plataforma.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Participación en foros, chats, videollamadas.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Envío de evidencias y resultados de evaluaciones.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Datos demográficos (edad, género, país y nivel educativo).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Encuestas iniciales o de satisfacción.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Datos de navegación (rutas de clics, páginas visitadas, etc.).
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -235,13 +235,13 @@
             p consolidar y almacenar los datos para su posterior análisis. A continuación, se presentan las herramientas:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Extracción mediante API o exportación de logs (CSV y JSON).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Bases de datos SQL (PostgreSQL y MySQL) o NoSQL (MongoDB).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Sistemas de almacenamiento en la nube (Google BigQuery, AWS S3 y Azure).
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -252,19 +252,19 @@
             p Eliminar inconsistencias y preparar datos confiables. A continuación, se presentan los procesos clave:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Imputación de valores nulos o ausentes.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Eliminación de registros duplicados.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Homogeneización de formatos de fecha, texto y numeración.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Corrección de etiquetas o errores ortográficos.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Identificación y manejo de outliers (por ejemplo, sesiones extremadamente largas).
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -275,13 +275,13 @@
             p Unir datos desde diversas fuentes. A continuación, se presentan las acciones típicas:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Unión por identificador único (ID de aprendiz o correo institucional).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Alineación temporal de eventos de aprendizaje.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Integración de datos históricos y contextuales (por ejemplo, historial académico).
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -292,22 +292,22 @@
             p Crear variables significativas para el modelo. A continuación, se presentan las variables derivadas útiles:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Número de días sin conexión.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Porcentaje de actividades completadas.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Participación en foros (% de mensajes enviados respecto al total).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Tendencia de calificaciones (ascendente o descendente).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Ratio de abandono previo.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Tiempo promedio de sesión.
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -318,16 +318,16 @@
             p Identificar las variables más predictivas del abandono. A continuación, se presentan los métodos aplicados:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Análisis de correlación (Pearson o Spearman).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Pruebas estadísticas (Chi-cuadrado para variables categóricas).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Importancia de variables mediante modelos de árbol ([i Random Forest o XGBoost]).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Eliminación de variables redundantes o poco informativas.
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -338,13 +338,13 @@
             p Preparar los datos para el entrenamiento y validación del modelo. A continuación, se presentan las estrategias:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | División típica: 70 % entrenamiento / 30 % prueba.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Validación cruzada (K-Fold) para mayor robustez.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Estratificación para mantener la proporción de clases (abandono vs. no abandono).
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -355,16 +355,16 @@
             p A continuación, se presentan los modelos recomendados:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Regresión Logística (modelo base).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | #[I Random Forest].
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | #[i Gradient Boosting (XGBoost y LightGBM)].
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Redes neuronales simples (si existe suficiente volumen de datos).
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -375,22 +375,22 @@
             p Verificar el desempeño predictivo del modelo. A continuación, se presentan las métricas clave:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Accuracy: porcentaje de predicciones correctas.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Precision: proporción de predicciones positivas correctas.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Recall: proporción de casos reales positivos correctamente detectados.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | F1-Score: balance entre precisión y recall.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | ROC-AUC: capacidad del modelo para diferenciar entre abandono y no abandono (especialmente relevante cuando las clases están desbalanceadas).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Matriz de confusión para visualización de errores.
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
@@ -401,26 +401,24 @@
             p Usar el modelo en producción para alertas tempranas de riesgo. A continuación, se presentan las opciones de despliegue:
             ul.lista-ul
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | API REST con Flask o FastAPI para integración con el LMS.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Dashboard de visualización (Power BI, Streamlit o Dash).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Automatización del reentrenamiento periódico (por cohorte o semestre).
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Generación de alertas automáticas para instructores.
               li
-                i.fas.fa-angle-right
+                i.fas.fa-minus
                 | Monitoreo de drift de datos: detección de cambios en los patrones de los datos para actualizar el modelo cuando sea necesario.
 
           .col-lg-5.col-10.order-lg-2.order-1.mb-lg-0.mb-4
             img(src='@/assets/curso/temas/tema3/img29.png' alt="Imagen decorativa")
-
-    p.mb-4 A continuación, se presenta un caso de uso de un proyecto en el cual se pretende diseñar un modelo de aprendizaje automático para la predicción de abandono de aprendices en plataformas de educación virtual:
-    p En resumen, un pipeline de datos es un camino establecido para el movimiento y transformación de datos, desde su origen hasta un punto de destino donde pueden ser utilizados para análisis, generación de informes o aplicaciones de IA. Su implementación incluye fases de extracción, preparación, carga y análisis, con un enfoque creciente en la automatización para mejorar la eficiencia y garantizar la adaptabilidad de los modelos a cambios futuros en los datos.
+    p En resumen, un #[i pipeline] de datos es un camino establecido para el movimiento y transformación de datos, desde su origen hasta un punto de destino donde pueden ser utilizados para análisis, generación de informes o aplicaciones de IA. Su implementación incluye fases de extracción, preparación, carga y análisis, con un enfoque creciente en la automatización para mejorar la eficiencia y garantizar la adaptabilidad de los modelos a cambios futuros en los datos.
 
 </template>
 

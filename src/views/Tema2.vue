@@ -24,7 +24,7 @@
             .row(numero="B" titulo="Normalización").p-3
               .col-md-12.mb-4.mb-md-0
                 p Esta técnica busca ajustar la escala de los valores de las variables numéricas para que puedan ser comparadas de forma justa y eficiente dentro de los algoritmos. Existen dos tipos principales:
-              .col-md-12.bgblanco
+              .col-md-12.bgblanco.p-3
                 ul.lista-ul
                   li
                     i.fas.fa-circle
@@ -104,13 +104,13 @@
           h5.mb-0 Ejemplo 1.
         ul.lista-ul--color
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Contexto: base de datos de ventas en una cadena de supermercados.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Inconsistencia: “Coca-Cola 500ml”, “CocaCola 0.5L”, “Coke 500” y “Coca cola 500 ml”.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | El problema se presenta porque todos estos registros se refieren al mismo producto, pero están escritos de manera diferente, dificultando el análisis de ventas por producto.
 
         .titulo.mb-4(data-aos="flip-up")
@@ -118,13 +118,13 @@
           h5.mb-0 Ejemplo 2.
         ul.lista-ul--color
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Contexto: base de datos de registro de clientes.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | Inconsistencia: “12/03/2024”, “2024-03-12”, “03-12-2024” y “12 Mar 2024”.
           li
-            i.fas.fa-angle-right
+            i.fas.fa-check
             | El problema se presenta porque las fechas están registradas en distintos formatos (europeo, ISO, estadounidense y textual), lo que puede causar errores en la interpretación y procesamiento de datos cronológicos.
 
     .row.justify-content-center.align-items-center.mb-5
@@ -274,7 +274,7 @@
             img(src='@/assets/curso/temas/tema2/img24.png', alt='Texto que describa la imagen')
       .row(titulo="Inversión de la transformación para la salida")
         .col-md-6.mb-4.mb-md-0
-          p Para que las predicciones del modelo, que a menudo están en un formato transformado (por ejemplo, valores numéricos escalados), sean comprensibles y útiles en el mundo real, es necesario revertir la transformación. Esta tarea la lleva a cabo el PIE-O (Prepared Information Environment Output) (Pyle, 1999).
+          p Para que las predicciones del modelo, que a menudo están en un formato transformado (por ejemplo, valores numéricos escalados), sean comprensibles y útiles en el mundo real, es necesario revertir la transformación. Esta tarea la lleva a cabo el PIE-O (<em>Prepared Information Environment Output</em>) (Pyle, 1999).
         .col-md-6
           figure
             img(src='@/assets/curso/temas/tema2/img25.png', alt='Texto que describa la imagen')

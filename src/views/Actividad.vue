@@ -395,7 +395,7 @@ export default {
         {
           id: 17,
           texto:
-            'Un pipeline de datos organiza las etapas del procesamiento de forma secuencial.',
+            'Un <em>pipeline</em> de datos organiza las etapas del procesamiento de forma secuencial.',
           imagen: require('@/assets/actividad/imagen2.png'),
           barajarRespuestas: true,
           opciones: [

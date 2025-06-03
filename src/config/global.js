@@ -112,7 +112,7 @@ export default {
           },
           {
             numero: '3.4',
-            titulo: 'SPipelines de procesamiento de datos',
+            titulo: '<em>Pipelines</em> de procesamiento de datos',
             hash: 't_3_4',
           },
         ],
