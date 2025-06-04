@@ -7,7 +7,7 @@
         span 2
       h1 Técnicas de transformación de datos
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-12.col-md-4.col-sm-3.mb-4(data-aos="zoom-in")
+      .col-lg-12.col-md-12.col-sm-3.mb-4(data-aos="zoom-in")
         figure
           img(src='@/assets/curso/temas/tema2/img1.png', alt='Texto que describa la imagen')
       .col-lg-12(data-aos="flip-up")
@@ -49,7 +49,7 @@
       .col-lg-10(data-aos="flip-up")
         .cajon.color-primario.p-4
           .row.justify-content-center.align-items-center
-            .col-lg-2.col-md-4.col-sm-3
+            .col-lg-2.col-md-4.col-sm-3.mb-md-4
               figure
                 img(src='@/assets/curso/temas/tema2/img6.svg', alt='Texto que describa la imagen')
             .col-lg-10
@@ -65,7 +65,7 @@
       span  #[i Representación de una variable categórica aplicando one-hot encoding ]
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-10.movil(data-aos="zoom-in")
+      .col-lg-8.movil(data-aos="zoom-in")
         figure
           img(src='@/assets/curso/temas/tema2/img7_1.svg', alt='En la figura 1 se presenta la conversión de una variable categórica llamada “Color”, con valores “Amarillo”, “Verde” y “Rojo”, a un formato numérico binario utilizando la técnica de one-hot encoding.')
       .col-lg-10.desktop(data-aos="zoom-in")
@@ -73,7 +73,7 @@
           img(src='@/assets/curso/temas/tema2/img7.svg', alt='En la figura 1 se presenta la conversión de una variable categórica llamada “Color”, con valores “Amarillo”, “Verde” y “Rojo”, a un formato numérico binario utilizando la técnica de one-hot encoding.')
     
     .row.justify-content-center.align-items-center
-      .col-lg-2.col-md-6.col-sm-4
+      .col-lg-2.col-md-6.col-sm-4.mb-md-4
         figure
           img(src='@/assets/curso/temas/tema2/img8.svg', alt='Texto que describa la imagen')
       .col-lg-8
@@ -93,7 +93,7 @@
         p.mb-0 Por tal razón, es importante identificar todo tipo de inconsistencias o duplicados. Las inconsistencias pueden manifestarse a nivel de esquema, como cuando el mismo nombre se asigna a diferentes objetos o se utilizan nombres distintos para un mismo objeto, o a nivel estructural, donde un objeto se representa de manera diferente en varias fuentes. También pueden presentarse a nivel de datos, donde los errores en el contenido real no son evidentes en el esquema, como errores tipográficos (Almeida, 2013).
       
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-3
+      .col-lg-3.col-md-6.col-sm-6.mb-md-4
         figure
           img(src='@/assets/curso/temas/tema2/img10.png', alt='Texto que describa la imagen')
 
@@ -135,7 +135,7 @@
               figure
                 img(src='@/assets/curso/temas/tema2/img11.svg', alt='Texto que describa la imagen')
             .col-lg-10
-              p Las discrepancias también pueden originarse por razones arquitectónicas al combinar datos de distintos sistemas de bases de datos no compatibles o por problemas de sincronización entre flujos de datos.
+              p.mb-0 Las discrepancias también pueden originarse por razones arquitectónicas al combinar datos de distintos sistemas de bases de datos no compatibles o por problemas de sincronización entre flujos de datos.
     p Los duplicados, por su parte, se refieren a registros que representan la misma entidad del mundo real. Esto puede ocurrir por errores en la entrada de datos o durante la integración de múltiples fuentes. Una auditoría de datos reveló que casi el 90 % del volumen de datos era duplicado, aunque altamente inconsistente (Pyle, 1999).
 
     separador
@@ -206,14 +206,14 @@
             .text-black.p-4
               h4.text-center Limpieza de datos (<em>data cleaning</em>)
               p.text-center Consiste en corregir errores e inconsistencias antes de cargar los datos en un <em>Data Warehouse</em>. Esto incluye reestructurar esquemas, reformatear atributos, definir valores por defecto y unificar formatos de datos.
-      .col-lg-4.mb-4(data-aos="fade-left")
+      .col-lg-4.mb-4.col-md-6.col-sm-8.mb-4(data-aos="fade-left")
         .tarjeta-avatar.h-100
           img(src='@/assets/curso/temas/tema2/img17.svg' alt='AvatarTop')
           .tarjeta.color-primario.tarjeta.color5.w-100
             .text-black.p-4
               h4.text-center Eliminación de duplicados (<em>duplicate elimination-merge-purge</em>)
               p.text-center Consiste en identificar registros similares (<em>matching</em>), fusionarlos (<em>merge</em>) en un solo registro sin redundancias, y luego eliminar los registros redundantes (<em>purge</em>).
-      .col-lg-4.mb-4(data-aos="fade-left")
+      .col-lg-4.mb-4.col-md-6.col-sm-8.mb-4(data-aos="fade-left")
         .tarjeta-avatar.h-100
           img(src='@/assets/curso/temas/tema2/img18.svg' alt='AvatarTop')
           .tarjeta.color-primario.tarjeta.color5.w-100
@@ -231,7 +231,7 @@
       h2 2.4	Transformación de datos para modelos de inteligencia artificial
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-2
+      .col-lg-2.col-md-4.col-sm-6.mb-md-4
         figure
           img(src="@/assets/curso/temas/tema2/img19.svg", alt="alt")
 
@@ -243,39 +243,39 @@
 
     AcordionA(tipo="a" clase-tarjeta="tarjeta tarjeta--azul").mb-5
       .row(titulo="Preparación para el modelado")
-        .col-md-6.mb-4.mb-md-0
+        .col-lg-6.mb-4.mb-md-0.order-2.lg-order-1
           p El objetivo principal es transformar los datos brutos en una forma que el modelo pueda entender y utilizar para aprender patrones y realizar predicciones. Esto incluye la transformación de variables categóricas en numéricas (codificación), la normalización o escalado de variables numéricas para garantizar que tengan rangos y distribuciones comparables, así como la imputación o sustitución de valores faltantes.
-        .col-md-6
+        .col-lg-6.col-md-12.mb-md-4.order-1.lg-order-2
           figure
             img(src='@/assets/curso/temas/tema2/img20.png', alt='Texto que describa la imagen')
       .row(titulo="Adaptación a los requisitos del modelo")
-        .col-md-6.mb-4.mb-md-0
+        .col-lg-6.mb-4.mb-md-0.order-2.lg-order-1
           p Los distintos tipos de modelos de inteligencia artificial presentan requisitos específicos en cuanto al formato y la representación de los datos. Por ejemplo, las redes neuronales suelen requerir entradas estrictamente numéricas, mientras que ciertos algoritmos estadísticos pueden funcionar de manera óptima con datos que sigan una distribución particular. La transformación asegura que los datos cumplan con estos requisitos.
-        .col-md-6
+        .col-lg-6.col-md-12.mb-md-4.order-1.lg-order-2
           figure
             img(src='@/assets/curso/temas/tema2/img21.png', alt='Texto que describa la imagen')
       .row(titulo="Mejora del rendimiento del modelo")
-        .col-md-6.mb-4.mb-md-0
+        .col-lg-6.mb-4.mb-md-0.order-2.lg-order-1
           p la transformación de datos puede mejorar la precisión, la eficiencia y la estabilidad del entrenamiento del modelo. Por ejemplo, la normalización ayuda a evitar que variables con rangos mayores dominen el proceso de aprendizaje (Wang, 2017). Técnicas como la reducción de dimensionalidad pueden simplificar los datos, disminuir el riesgo de sobreajuste y acelerar el entrenamiento.
-        .col-md-6
+        .col-lg-6.col-md-12.mb-md-4.order-1.lg-order-2
           figure
             img(src='@/assets/curso/temas/tema2/img22.png', alt='Texto que describa la imagen')
       .row(titulo="Extracción de características relevantes")
-        .col-md-6.mb-4.mb-md-0
+        .col-lg-6.mb-4.mb-md-0.order-2.lg-order-1
           p La transformación puede incluir la creación de nuevas variables (ingeniería de características) a partir de las existentes para resaltar información más relevante para la tarea de predicción (Tsai, 2015). Normalmente, la extracción de características viene acompañada de un análisis de componentes principales (PCA), una forma de reducción de la dimensionalidad que simplifica conjuntos de datos con muchas variables. Su objetivo es convertir un espacio de características de alta dimensión en uno de menor dimensión, manteniendo la información esencial. Esto se refleja en una mayor eficiencia del modelo al minimizar el riesgo de sobreajuste. La efectividad de la reducción de dimensionalidad puede compararse evaluando el rendimiento del modelo antes y después de aplicarla.
-        .col-md-6
+        .col-lg-6.col-md-12.mb-md-4.order-1.lg-order-2
           figure
             img(src='@/assets/curso/temas/tema2/img23.png', alt='Texto que describa la imagen')
       .row(titulo="Manejo de datos de ejecución (<em>live data</em>)")
-        .col-md-6.mb-4.mb-md-0
-          p Una vez entrenado el modelo, cualquier dato nuevo que se utilice para realizar predicciones debe ser transformado exactamente de la misma forma que los datos de entrenamiento y prueba. El PIE-I (<em>Prepared Information Environment Input</em>) es el encargado de esta transformación (Pyle, 1999).
-        .col-md-6
+        .col-lg-6.mb-4.mb-md-0.order-2.lg-order-1
+          p Una vez entrenado el modelo, cualquier dato nuevo que se utilice para realizar predicciones debe ser transformado exactamente de la misma forma que los datos de entrenamiento y prueba. El PIE-I (Prepared Information Environment Input) es el encargado de esta transformación (Pyle, 1999).
+        .col-lg-6.col-md-12.mb-md-4.order-1.lg-order-2
           figure
             img(src='@/assets/curso/temas/tema2/img24.png', alt='Texto que describa la imagen')
       .row(titulo="Inversión de la transformación para la salida")
-        .col-md-6.mb-4.mb-md-0
-          p Para que las predicciones del modelo, que a menudo están en un formato transformado (por ejemplo, valores numéricos escalados), sean comprensibles y útiles en el mundo real, es necesario revertir la transformación. Esta tarea la lleva a cabo el PIE-O (<em>Prepared Information Environment Output</em>) (Pyle, 1999).
-        .col-md-6
+        .col-lg-6.mb-4.mb-md-0.order-2.lg-order-1
+          p Para que las predicciones del modelo, que a menudo están en un formato transformado (por ejemplo, valores numéricos escalados), sean comprensibles y útiles en el mundo real, es necesario revertir la transformación. Esta tarea la lleva a cabo el PIE-O (Prepared Information Environment Output) (Pyle, 1999).
+        .col-lg-6.col-md-12.mb-md-4.order-1.lg-order-2
           figure
             img(src='@/assets/curso/temas/tema2/img25.png', alt='Texto que describa la imagen')
 

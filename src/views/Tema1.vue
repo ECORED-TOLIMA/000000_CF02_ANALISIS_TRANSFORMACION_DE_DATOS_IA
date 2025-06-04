@@ -7,7 +7,7 @@
           span 1
         h1 Técnicas de limpieza de datos
       .row.justify-content-center.align-items-center.mb-5
-        .col-lg-12.col-md-4.col-sm-3.mb-4(data-aos="zoom-in")
+        .col-lg-12.col-md-12.col-sm-3.mb-4(data-aos="zoom-in")
           figure
             img(src='@/assets/curso/temas/tema1/img1.png', alt='Texto que describa la imagen')
         .col-lg-12(data-aos="flip-up")
@@ -84,7 +84,7 @@
         .col-lg-8.col-sm-8.movil(data-aos="zoom-in")
           figure
             img(src='@/assets/curso/temas/tema1/img5_1.svg', alt='Texto que describa la imagen')
-        .col-lg-8.col-md-6.col-sm-8.mb-4(data-aos="zoom-in")
+        .col-lg-8.col-md-6.col-sm-8.mb-4.desktop(data-aos="zoom-in")
           figure
             img(src='@/assets/curso/temas/tema1/img5.svg', alt='Texto que describa la imagen')
       p.mb-4 En resumen, la implementación de metodologías como el Data Assay y el Data Cleaning, junto con la estandarización y validación de datos, conforma un enfoque integral para garantizar su calidad. Este enfoque es indispensable para obtener resultados confiables tanto en el análisis estadístico como en aplicaciones basadas en inteligencia artificial.
@@ -111,7 +111,7 @@
         h2 1.3	Técnicas de limpieza mediante imputación, eliminación y corrección
       
       .row.justify-content-center.align-items-center.mb-4
-        .col-lg-4
+        .col-lg-4.col-md-8.col-sm-8.mb-md-4
           figure
             img(src='@/assets/curso/temas/tema1/img7.png', alt='Texto que describa la imagen')
 
@@ -167,25 +167,25 @@
             SlyderF.mb-5(columnas="col-lg-6 col-xl-4")
               .tarjeta.tarjeta--BG01.color-primario.p-4
                 .row.justify-content-center.mb-3
-                  .col-6
+                  .col-6.col-md-4
                     img(src='@/assets/curso/temas/tema1/img8.svg' alt='AvatarTop')
                 h5.text-center Imputación de valores faltantes
                 p Consiste en reemplazar los datos ausentes con estimaciones como el promedio, la mediana, la moda o valores predichos mediante algoritmos como KNN (K-Nearest Neighbors) o regresión.
               .tarjeta.tarjeta--BG01.color-primario.p-4
                 .row.justify-content-center.mb-3
-                  .col-6
+                  .col-6.col-md-4
                     img(src='@/assets/curso/temas/tema1/img9.svg' alt='AvatarTop')
                 h5.text-center Eliminación de registros o variables
                 p Se utiliza cuando el número de errores es elevado o los datos no aportan valor analítico.
               .tarjeta.tarjeta--BG01.color-primario.p-4
                 .row.justify-content-center.mb-3
-                  .col-6
+                  .col-6.col-md-4
                     img(src='@/assets/curso/temas/tema1/img10.svg' alt='AvatarTop')
                 h5.text-center Corrección de inconsistencias
                 p Incluye la estandarización de formatos (por ejemplo, unificar “Colombia” y “colombia”), la armonización de unidades de medida y la corrección ortográfica.
               .tarjeta.tarjeta--BG01.color-primario.p-4
                 .row.justify-content-center.mb-3
-                  .col-6
+                  .col-6.col-md-4
                     img(src='@/assets/curso/temas/tema1/img11.svg' alt='AvatarTop')
                 h5.text-center Tratamiento de valores atípicos (#[i outliers]): 
                 p Se puede realizar mediante técnicas estadísticas como el rango intercuartílico, el #[i Z-score], o modelando estos valores de forma separada si son representativos.

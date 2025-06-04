@@ -7,7 +7,7 @@
         span 3
       h1 Integración y almacenamiento de datos
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-3
+      .col-lg-3.col-md-6.mb-4
         figure
           img(src="@/assets/curso/temas/tema3/img1.svg", alt="alt")
 
@@ -32,8 +32,9 @@
       .col-lg-10
         LineaTiempoD.color-acento-botones
           .row(numero="A" titulo="Extracción").p-3
-            .col-md-12.mb-4.mb-md-0
+            .col-lg-12.mb-4.mb-md-0
               p Es el primer paso del proceso ETL y consiste en obtener datos relevantes de múltiples fuentes, que pueden incluir sistemas OLTP (#[i Online Transaction Processing]), hojas de cálculo, archivos de texto, bases de datos no estructuradas o contenido web. Para optimizar el tiempo de procesamiento, no siempre se extraen todos los datos, sino únicamente aquellos que han cambiado desde la última ejecución, principalmente registros nuevos o actualizados. La detección de cambios suele realizarse mediante la comparación entre dos instantáneas de los datos: una correspondiente a la última extracción y otra actual. Para este fin, las herramientas ETL emplean conectividad directa con las fuentes mediante conectores, APIs (#[i Application Programming Interfaces]) o servicios de datos, asegurando un acceso eficiente y seguro.
+            .col-lg-12.mb-4.mb-md-0
               figure
                 img(src='@/assets/curso/temas/tema3/img3.png', alt='Texto que describa la imagen')
           .row(numero="B" titulo="Transformación").p-3
@@ -51,7 +52,7 @@
     #t_3_2.titulo-segundo.color-acento-contenido(data-aos="flip-up")
       h2 3.2 Preparación de datos para modelos de aprendizaje automático
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.col-md-10.mb-md-4
         figure
           img(src='@/assets/curso/temas/tema3/img6.png', alt='Texto que describa la imagen')
       .col-lg-7
@@ -104,8 +105,6 @@
     p La preparación de datos resulta particularmente crítica en aplicaciones de analítica predictiva, donde se utilizan modelos estadísticos y algoritmos de aprendizaje automático para detectar patrones en datos históricos y anticipar comportamientos y tendencias futuras (Zakir, 2015).
     p Una adecuada preparación de los datos no solo mejora el desempeño de los modelos, sino que también minimiza el riesgo de sobreajuste y maximiza la capacidad del modelo para ofrecer predicciones precisas en escenarios reales.
 
-
-
     separador
     #t_3_3.titulo-segundo.color-acento-contenido(data-aos="flip-up")
       h2 3.3 Diseño de modelos de datos para algoritmos de inteligencia artificial y aprendizaje automático
@@ -125,7 +124,7 @@
                   img(src='@/assets/curso/temas/tema3/img13.png', alt='Texto que describa la imagen')
 
             .row(titulo="")
-              .col-md-6
+              .col-md-6.mb-md-4
                 figure
                   img(src='@/assets/curso/temas/tema3/img14.png', alt='Texto que describa la imagen')
               .col-md-6.mb-4.mb-md-0
@@ -167,7 +166,7 @@
       h2 3.4 #[i Pipelines] de procesamiento de datos
     p.mb-4 En el ámbito del procesamiento de datos, un pipeline es un flujo organizado que transporta los datos a través de varias etapas de procesamiento, transformando datos sin procesar en información valiosa o conocimientos útiles. Cada fase cumple una tarea específica, utilizando el resultado de la etapa anterior como entrada. Se podría afirmar que son una serie de procesos interconectados que transportan y transforman datos desde sus fuentes originales hasta un destino final, como un almacén de datos, un sistema de análisis o una aplicación de inteligencia artificial (Almeida, 2013).
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-4
+      .col-lg-4.col-md-8.mb-md-4
         figure
           img(src='@/assets/curso/temas/tema3/img19.svg', alt='Texto que describa la imagen')
       .col-lg-6

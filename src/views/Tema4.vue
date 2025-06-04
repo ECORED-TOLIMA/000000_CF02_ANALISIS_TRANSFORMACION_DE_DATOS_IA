@@ -7,7 +7,7 @@
         span 4
       h1 Automatización de modelos de inteligencia artificial
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-12.col-md-4.col-sm-3.mb-4(data-aos="zoom-in")
+      .col-lg-12.mb-4(data-aos="zoom-in")
         figure
           img(src='@/assets/curso/temas/tema4/img1.png', alt='Texto que describa la imagen')
       .col-lg-12(data-aos="flip-up")
@@ -41,7 +41,7 @@
               li 
                 .lista-ol--cuadro__vineta
                   span 5
-                | El reentrenamiento programado de modelos de #[i machine learning], considerando validaciones cruzadas y evaluaciones de desempeño periódicas.
+                p.mb-0 El reentrenamiento programado de modelos de #[i machine learning], considerando validaciones cruzadas y evaluaciones de desempeño periódicas.
       p Esta automatización se logra mediante la construcción de #[i pipelines] que conectan las etapas de forma orquestada, utilizando herramientas de orquestación de flujos de trabajo como Apache Airflow, Kubeflow Pipelines o servicios integrados en plataformas en la nube.
     separador
     #t_4_2.titulo-segundo.color-acento-contenido(data-aos="flip-up")
